@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-OK Day Care</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('aok.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #ff9900;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #background-image {
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        #overlay {
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        /* Rest of your CSS styles */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to A-OK Day Care</h1>
+        <p>Your child's happiness is our priority!</p>
+    </header>
+    <main>
+        <section id="background-image">
+            <div id="overlay">
+                <section id="advertisement">
+                    <h2>Enroll your child today</h2>
+                    <p>We provide a safe and nurturing environment for your child. Fill out the form below for more information.</p>
+                    <form id="contact-form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        
+                        <button type="submit">Submit</button>
+                    </form>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 A-OK Day Care</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contact-form');
+        
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+        
+                // You can add your JavaScript code here to handle form submission.
+                // For example, you can collect form data and perform actions as needed.
+                const name = form.elements.name.value;
+                const email = form.elements.email.value;
+                const phone = form.elements.phone.value;
+        
+                // You can then use this data as needed.
+                console.log('Name:', name);
+                console.log('Email:', email);
+                console.log('Phone:', phone);
+        
+                // You can also reset the form after submission if needed.
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
